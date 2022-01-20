@@ -6,10 +6,17 @@ export const globalStyles = globalCss({
   },
   "html, body": {
     height: "100%",
+    margin: 0,
   },
   body: {
+    fontFamily: "Overpass",
+    backgroundColor: "$dark75",
     lineHeight: 1.5,
+    color: "$white",
     webkitFontSmoothing: "antialiased",
+  },
+  html: {
+    scrollBehavior: "smooth",
   },
   "img, picture, video, canvas, svg": {
     display: "block",
@@ -23,5 +30,16 @@ export const globalStyles = globalCss({
   },
   "#root, #__next": {
     isolation: "isolate",
+  },
+  "h3, h4": {
+    margin: 0,
+  },
+  a: {
+    textDecoration: "none",
+    color: "inherit",
+  },
+  ul: {
+    listStyle: "none",
+    padding: 0,
   },
 });
