@@ -2,6 +2,7 @@ import { SideBar } from "../components/SideBar";
 import { styled } from "../styles/stitches.config";
 import { Home } from "../components/Home";
 import { About } from "../components/About";
+import { Skills } from "../components/Skills";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Right_Container>
         <Home />
         <About />
+        <Skills />
       </Right_Container>
     </App_Container>
   );
