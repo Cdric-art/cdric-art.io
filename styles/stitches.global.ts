@@ -14,6 +14,7 @@ export const globalStyles = globalCss({
     lineHeight: 1.5,
     color: "$white",
     webkitFontSmoothing: "antialiased",
+    mozOsxFontSmoothing: "grayscale",
   },
   html: {
     scrollBehavior: "smooth",
