@@ -11,5 +11,30 @@ export const Container = styled("section", {
   "@desktop": {
     flexDirection: "row",
     justifyContent: "space-between",
+
+    "&::before": {
+      position: "absolute",
+      content: "<section>",
+      fontFamily: "La Belle Aurore",
+      fontSize: "1.2rem",
+      fontStyle: "italic",
+      color: "$gray100",
+      fontWeight: 400,
+      letterSpacing: 1,
+      top: 80,
+      left: 50,
+    },
+    "&::after": {
+      position: "absolute",
+      content: "</section>",
+      fontFamily: "La Belle Aurore",
+      fontSize: "1.2rem",
+      fontStyle: "italic",
+      color: "$gray100",
+      fontWeight: 400,
+      letterSpacing: 1,
+      bottom: 80,
+      left: 50,
+    },
   },
 });
