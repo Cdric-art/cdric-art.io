@@ -17,4 +17,23 @@ export const Text = styled("article", {
   "@tablet": {
     fontSize: ".95rem",
   },
+  variants: {
+    color: {
+      light: {
+        color: "$gray50",
+      },
+    },
+    size: {
+      small: {
+        fontSize: ".5rem",
+        lineHeight: 1,
+        paddingBlock: 2,
+
+        "@tablet": {
+          paddingBlock: "$space1",
+          fontSize: ".7rem",
+        },
+      },
+    },
+  },
 });
