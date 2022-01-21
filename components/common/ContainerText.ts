@@ -11,4 +11,14 @@ export const ContainerText = styled("article", {
     paddingRight: 0,
     marginTop: 0,
   },
+
+  variants: {
+    size: {
+      large: {
+        "@desktop": {
+          maxWidth: "80%",
+        },
+      },
+    },
+  },
 });
