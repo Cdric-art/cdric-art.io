@@ -68,10 +68,6 @@ const Wrapper = styled("div", {
   },
 
   "@tablet": {
-    opacity: 0.1,
-  },
-
-  "@desktop": {
     opacity: 1,
   },
 });

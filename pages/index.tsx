@@ -1,6 +1,7 @@
 import { SideBar } from "../components/SideBar";
 import { styled } from "../styles/stitches.config";
 import { Home } from "../components/Home";
+import { About } from "../components/About";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <SideBar />
       <Right_Container>
         <Home />
+        <About />
       </Right_Container>
     </App_Container>
   );
@@ -15,6 +17,7 @@ const App = () => {
 
 export default App;
 const App_Container = styled("section", {
+  position: "relative",
   backgroundColor: "$dark75",
   overflow: "hidden",
 

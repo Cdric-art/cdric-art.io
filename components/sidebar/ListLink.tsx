@@ -6,22 +6,22 @@ export const ListLink = () => {
   return (
     <List>
       <li>
-        <Link href="/#about">
+        <Link href="#about">
           <a>A propos</a>
         </Link>
       </li>
       <li>
-        <Link href="/#skills">
+        <Link href="#skills">
           <a>Mes compétences</a>
         </Link>
       </li>
       <li>
-        <Link href="/#projects">
+        <Link href="#projects">
           <a>Mes projets</a>
         </Link>
       </li>
       <li>
-        <Link href="/#contact">
+        <Link href="#contact">
           <a>Contact</a>
         </Link>
       </li>

@@ -42,4 +42,16 @@ export const globalStyles = globalCss({
     listStyle: "none",
     padding: 0,
   },
+  "::-webkit-scrollbar": {
+    width: 4,
+    height: 5,
+  },
+  "::-webkit-scrollbar-track": {
+    background: "$gray50",
+    padding: 1,
+  },
+  "::-webkit-scrollbar-thumb": {
+    background: "$contrast",
+    borderRadius: 4,
+  },
 });
