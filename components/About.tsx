@@ -18,14 +18,10 @@ export const About = () => {
           <Text>
             Je suis un jeune développeur web de 30 ans, habitant à Paris. Je
             suis <span>autodidacte depuis plus de deux ans</span> dans ce
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            domaine, et j'ai également obtenu une <span>
-              licence en 2021
-            </span>{" "}
+            domaine, et j'ai également obtenu une <span>licence en 2021</span>{" "}
             suite à une formation IFOCOP.
           </Text>
           <Text>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
             Avant de me lancer dans le développement Web, j'étais
             Manager/Barman. En 2009, j’ai obtenu un Bac Technologique Hôtelier à
             Gérardmer. Cela fait aujourd’hui 12 ans que j’exerce ce métier. J’ai
@@ -33,7 +29,6 @@ export const About = () => {
             différents. J’ai été salarié en CDI, CDD, Extra, Saisonnier mais
             également gérant d’une SARL.
             <span>
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
               &nbsp;N'hésitez pas à visiter ma page&nbsp;
               <a
                 href="https://www.whire.me/@cdricart"
