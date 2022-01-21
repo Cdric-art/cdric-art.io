@@ -36,5 +36,6 @@ export const { styled, globalCss } = createStitches({
   media: {
     tablet: "(min-width: 480px)",
     desktop: "(min-width: 770px)",
+    full: "(min-width: 1080px)",
   },
 });

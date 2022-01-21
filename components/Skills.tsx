@@ -12,7 +12,7 @@ import { WorkExperience } from "./skills/WorkExperience";
 
 export const Skills = () => {
   return (
-    <Container id="skills">
+    <Container css={{ marginTop: -50 }} id="skills">
       <ContainerText>
         <TitleSection>Skills & Experience</TitleSection>
         <WrapperParagraphe>

@@ -7,6 +7,7 @@ export const Container = styled("section", {
   justifyContent: "center",
   alignItems: "center",
   height: "100vh",
+  overflow: "hidden",
 
   "@desktop": {
     flexDirection: "row",
@@ -35,6 +36,15 @@ export const Container = styled("section", {
       letterSpacing: 1,
       bottom: 80,
       left: 50,
+    },
+  },
+
+  variants: {
+    position: {
+      direction: {
+        flexDirection: "column",
+        justifyContent: "center",
+      },
     },
   },
 });
