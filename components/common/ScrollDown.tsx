@@ -1,15 +1,14 @@
 import React from "react";
 import { styled } from "../../styles/stitches.config";
-import { keyframes } from "@stitches/react";
+import { keyframes, VariantProps } from "@stitches/react";
 import { ArrowIcon } from "../svg";
 
 type ScrollDownProps = {
-  position: string;
+  position: VariantProps<HTMLDivElement>;
 };
 
 export const ScrollDown = ({ position }: ScrollDownProps) => {
   return (
-    // @ts-ignore
     <Wrapper position={position}>
       <span>scroll down</span>
       <ArrowIcon />

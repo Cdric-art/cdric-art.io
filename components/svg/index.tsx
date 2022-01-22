@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "../../styles/stitches.config";
+import { VariantProps } from "@stitches/react";
 
 export const TwitterIcon = () => {
   return (
@@ -43,7 +44,11 @@ export const ArrowIcon = () => {
   );
 };
 
-export const ArrowVariants = ({ position }: any) => {
+type ArrowProps = {
+  position: VariantProps<SVGElement>;
+};
+
+export const ArrowVariants = ({ position }: ArrowProps) => {
   return (
     <Arrow
       position={position}
