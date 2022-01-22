@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 
@@ -9,9 +9,11 @@ import ArtisteImg from "../../public/assets/images/artiste.png";
 import WhireCardImg from "../../public/assets/images/card-whire.png";
 import CalculateImg from "../../public/assets/images/calculate.png";
 import { ArrowVariants } from "../svg";
+import { Modal } from "./modal/Modal";
 
 export const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [dataset, setDataset] = useState<number | null>(null);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -24,25 +26,25 @@ export const Carousel = () => {
   return (
     <Embla ref={emblaRef}>
       <Wrapper>
-        <Slide>
+        <Slide onClick={() => setDataset(1)}>
           <Image src={WhireImg} alt="Project Whire" />
           <h3>Whire</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
-        <Slide>
+        <Slide onClick={() => setDataset(2)}>
           <Image src={ArtisteImg} alt="Project Artiste" />
           <h3>Artiste</h3>
           <SpanGreen />
           <p>React JS - WordPress</p>
         </Slide>
-        <Slide>
+        <Slide onClick={() => setDataset(3)}>
           <Image src={WhireCardImg} alt="Project Whire Card" />
           <h3>Whire Card - Side project</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
-        <Slide>
+        <Slide onClick={() => setDataset(4)}>
           <Image src={CalculateImg} alt="Project Calculate" />
           <h3>Calculate App</h3>
           <SpanGreen />
@@ -57,13 +59,13 @@ export const Carousel = () => {
           <ArrowVariants position={"right"} />
         </Button>
       </ButtonWrapper>
+      {dataset && <Modal dataset={dataset} toggle={setDataset} />}
     </Embla>
   );
 };
 
 const Embla = styled("div", {
   overflow: "hidden",
-  position: "relative",
   marginTop: 80,
   paddingBottom: 20,
 
@@ -125,9 +127,13 @@ const SpanGreen = styled("span", {
 
 const ButtonWrapper = styled("div", {
   position: "absolute",
-  bottom: 0,
+  bottom: "5vh",
   left: "50%",
   transform: "translateX(-50%)",
+
+  "@tablet": {
+    bottom: "15vh",
+  },
 });
 
 const Button = styled("button", {

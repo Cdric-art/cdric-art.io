@@ -5,7 +5,7 @@ import { TitleSection } from "./common/TitleSection";
 import { WrapperParagraphe } from "./common/WrapperParagraphe";
 import { Text } from "./common/Text";
 import { ScrollDown } from "./common/ScrollDown";
-import { Carousel } from "./common/Carousel";
+import { Carousel } from "./projects/Carousel";
 
 export const Projects = () => {
   return (
