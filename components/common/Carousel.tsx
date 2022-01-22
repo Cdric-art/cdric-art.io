@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 import { styled } from "../../styles/stitches.config";
@@ -12,7 +11,7 @@ import CalculateImg from "../../public/assets/images/calculate.png";
 import { ArrowVariants } from "../svg";
 
 export const Carousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -66,7 +65,11 @@ const Embla = styled("div", {
   overflow: "hidden",
   position: "relative",
   marginTop: 80,
-  paddingBottom: 80,
+  paddingBottom: 20,
+
+  "@tablet": {
+    paddingBottom: 80,
+  },
 });
 
 const Wrapper = styled("div", {
