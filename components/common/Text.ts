@@ -14,6 +14,13 @@ export const Text = styled("article", {
     textDecoration: "underline",
   },
 
+  ul: {
+    display: "block",
+    marginTop: "$space6",
+    marginLeft: "$space6",
+    listStyle: "initial",
+  },
+
   "@tablet": {
     fontSize: ".95rem",
   },

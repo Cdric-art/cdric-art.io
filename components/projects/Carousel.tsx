@@ -40,7 +40,7 @@ export const Carousel = () => {
         </Slide>
         <Slide onClick={() => setDataset(3)}>
           <Image src={WhireCardImg} alt="Project Whire Card" />
-          <h3>Whire Card - Side project</h3>
+          <h3>Whire Card</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
@@ -81,7 +81,7 @@ const Wrapper = styled("div", {
 const Slide = styled("div", {
   position: "relative",
   flex: "0 0 100%",
-  alignSelf: "start",
+  alignSelf: "center",
   width: "35%",
   maxWidth: 300,
   marginRight: 50,
@@ -104,7 +104,7 @@ const Slide = styled("div", {
   },
 
   p: {
-    fontSize: "1.4rem",
+    fontSize: "1.2rem",
     margin: "$space4 0 0 0",
     padding: "$space1",
     fontWeight: 400,
