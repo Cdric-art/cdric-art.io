@@ -57,10 +57,10 @@ const Wrapper = styled("div", {
   variants: {
     position: {
       left: {
-        left: 5,
+        left: 15,
       },
       right: {
-        right: 5,
+        right: 15,
       },
     },
   },
