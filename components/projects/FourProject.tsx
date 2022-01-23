@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { TitleModal } from "./modal/TitleModal";
 import { WrapperImages } from "./modal/WrapperImages";
 import { ModalBody } from "./modal/ModalBody";
@@ -19,9 +18,9 @@ export const FourProject = () => {
       <TitleModal name={"Calculate App"} />
       <div style={{ padding: 20 }}>
         <WrapperImages>
-          <Image src={Calculate1} alt="Calculate 1" />
-          <Image src={Calculate2} alt="Calculate 2" />
-          <Image className={"img"} src={Calculate3} alt="Calculate 3" />
+          <img src={Calculate1.src} alt="Calculate 1" />
+          <img src={Calculate2.src} alt="Calculate 2" />
+          <img className={"img"} src={Calculate3.src} alt="Calculate 3" />
         </WrapperImages>
         <ModalBody>
           <ModalDescription>

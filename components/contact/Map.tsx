@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Text } from "../common/Text";
 
 import MapImage from "../../public/assets/images/map.png";
@@ -8,7 +7,7 @@ import { styled } from "../../styles/stitches.config";
 export const Map = () => {
   return (
     <Wrapper>
-      <Image src={MapImage} alt={"Map"} />
+      <img src={MapImage.src} alt={"Map"} />
       <Info>
         <Text css={{ padding: 0 }}>Evrard Cédric</Text>
         <Text css={{ padding: 0 }}>75006, Paris</Text>

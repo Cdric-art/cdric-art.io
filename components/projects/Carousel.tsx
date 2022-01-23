@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
 
 import { styled } from "../../styles/stitches.config";
 
@@ -27,25 +26,25 @@ export const Carousel = () => {
     <Embla ref={emblaRef}>
       <Wrapper>
         <Slide onClick={() => setDataset(1)}>
-          <Image src={WhireImg} alt="Project Whire" />
+          <img src={WhireImg.src} alt="Project Whire" />
           <h3>Whire</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
         <Slide onClick={() => setDataset(2)}>
-          <Image src={ArtisteImg} alt="Project Artiste" />
+          <img src={ArtisteImg.src} alt="Project Artiste" />
           <h3>Artiste</h3>
           <SpanGreen />
           <p>React JS - WordPress</p>
         </Slide>
         <Slide onClick={() => setDataset(3)}>
-          <Image src={WhireCardImg} alt="Project Whire Card" />
+          <img src={WhireCardImg.src} alt="Project Whire Card" />
           <h3>Whire Card</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
         <Slide onClick={() => setDataset(4)}>
-          <Image src={CalculateImg} alt="Project Calculate" />
+          <img src={CalculateImg.src} alt="Project Calculate" />
           <h3>Calculate App</h3>
           <SpanGreen />
           <p>React Native</p>

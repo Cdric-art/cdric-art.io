@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { TitleModal } from "./modal/TitleModal";
 import { WrapperImages } from "./modal/WrapperImages";
 import { ModalBody } from "./modal/ModalBody";
@@ -19,9 +18,9 @@ export const ThirdProject = () => {
       <TitleModal name={"Card Whire"} />
       <div style={{ padding: 20 }}>
         <WrapperImages>
-          <Image src={CardWhire1} alt="CardWhire1" />
-          <Image src={CardWhire2} alt="CardWhire1" />
-          <Image className={"img"} src={CardWhire3} alt="CardWhire1" />
+          <img src={CardWhire1.src} alt="CardWhire1" />
+          <img src={CardWhire2.src} alt="CardWhire1" />
+          <img className={"img"} src={CardWhire3.src} alt="CardWhire1" />
         </WrapperImages>
         <ModalBody>
           <ModalDescription>

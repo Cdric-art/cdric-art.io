@@ -32,6 +32,10 @@ export const globalStyles = globalCss({
   "#root, #__next": {
     isolation: "isolate",
   },
+  ":root": {
+    scrollbarColor: "#08fdd8 #909096!important",
+    scrollbarWidth: "thin!important",
+  },
   "h3, h4": {
     margin: 0,
   },

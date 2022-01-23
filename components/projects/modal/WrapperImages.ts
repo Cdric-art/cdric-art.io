@@ -7,7 +7,7 @@ export const WrapperImages = styled("div", {
 
   "@tablet": {
     gridTemplateColumns: "1fr 1fr",
-    "& span:last-child": {
+    "& img:last-child": {
       gridColumn: "span 2!important",
       justifySelf: "center!important",
       width: "50%!important",

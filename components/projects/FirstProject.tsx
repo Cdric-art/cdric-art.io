@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { TitleModal } from "./modal/TitleModal";
 import { WrapperImages } from "./modal/WrapperImages";
 import { Text } from "../common/Text";
@@ -19,9 +18,9 @@ export const FirstProject = () => {
       <TitleModal name={"Whire"} />
       <div style={{ padding: 20 }}>
         <WrapperImages>
-          <Image src={Whire1} alt="Whire 1" />
-          <Image src={Whire2} alt="Whire 2" />
-          <Image className={"img"} src={Whire3} alt="Whire 3" />
+          <img src={Whire1.src} alt="Whire 1" />
+          <img src={Whire2.src} alt="Whire 2" />
+          <img className={"img"} src={Whire3.src} alt="Whire 3" />
         </WrapperImages>
         <ModalBody>
           <ModalDescription>
