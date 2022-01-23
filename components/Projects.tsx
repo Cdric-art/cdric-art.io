@@ -9,7 +9,7 @@ import { Carousel } from "./projects/Carousel";
 
 export const Projects = () => {
   return (
-    <Container position={"direction"} id="projects">
+    <Container position={"direction"} after={"display"} id="projects">
       <ContainerText css={{ alignSelf: "start" }} size={"large"}>
         <TitleSection>My projects</TitleSection>
         <WrapperParagraphe>

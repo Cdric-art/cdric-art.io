@@ -33,11 +33,10 @@ const List = styled("ul", {
 
   "& svg": {
     width: 24,
-    fill: "$white",
     transition: "all .3s",
 
     "&:hover": {
-      fill: "$contrast",
+      color: "$contrast",
     },
   },
 });

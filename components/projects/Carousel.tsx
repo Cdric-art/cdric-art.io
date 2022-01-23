@@ -65,7 +65,7 @@ export const Carousel = () => {
 
 const Embla = styled("div", {
   overflow: "hidden",
-  marginTop: 80,
+  marginTop: "5vh",
   paddingBottom: 20,
 
   "@tablet": {
@@ -131,7 +131,7 @@ const ButtonWrapper = styled("div", {
   transform: "translateX(-50%)",
 
   "@tablet": {
-    bottom: "15vh",
+    bottom: "10vh",
   },
 });
 
@@ -139,7 +139,7 @@ const Button = styled("button", {
   marginInline: "$space4",
   border: "1px solid $contrast",
   borderRadius: "50%",
-  backgroundColor: "$dark50",
+  background: "none",
   outline: "none",
   height: 34,
   width: 34,
@@ -147,8 +147,7 @@ const Button = styled("button", {
   transition: "all .3s",
 
   "&:hover, &:hover svg": {
-    backgroundColor: "$contrast",
     borderColor: "$white",
-    fill: "$white",
+    color: "$white",
   },
 });

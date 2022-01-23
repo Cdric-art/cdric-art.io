@@ -46,5 +46,12 @@ export const Container = styled("section", {
         justifyContent: "center",
       },
     },
+    after: {
+      display: {
+        "&::after, &::before": {
+          display: "none",
+        },
+      },
+    },
   },
 });
