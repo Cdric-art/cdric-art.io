@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <title>Cdric_Art - Développeur Web React</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
