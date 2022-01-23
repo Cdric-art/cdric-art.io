@@ -12,7 +12,8 @@ export const Map = () => {
         <Text css={{ padding: 0 }}>Evrard Cédric</Text>
         <Text css={{ padding: 0 }}>75006, Paris</Text>
         <Text css={{ padding: 0 }}>
-          <span>@ : </span>cdric.art@gmail.com
+          <span>@ : </span>
+          <a href="mailto:contact@cdric-art.me">contact@cdric-art.me</a>
         </Text>
       </Info>
     </Wrapper>
@@ -25,7 +26,7 @@ const Wrapper = styled("div", {
   alignSelf: "flex-end",
 
   img: {
-    maxHeight: 300,
+    maxHeight: 150,
     objectFit: "cover",
     width: "100%",
     height: "100%",
@@ -33,7 +34,7 @@ const Wrapper = styled("div", {
 
   "@tablet": {
     img: {
-      maxHeight: 500,
+      maxHeight: 400,
     },
   },
 
@@ -47,13 +48,14 @@ const Wrapper = styled("div", {
 
 const Info = styled("div", {
   position: "absolute",
-  top: "30%",
-  left: 10,
+  top: 10,
+  left: 20,
   padding: "$space2",
   backgroundColor: "$dark100",
   border: "1px solid $contrast",
 
   "@tablet": {
+    top: "30%",
     left: 50,
   },
 });

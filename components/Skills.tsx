@@ -27,7 +27,7 @@ export const Skills = () => {
             N'hésitez pas à consulter mon <span>CV</span>&nbsp;en cliquant&nbsp;
             <span>
               <a
-                href="/assets/files/CV-EVRARDCedric.pdf"
+                href="/assets/files/CV-EVRARD-Cedric.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

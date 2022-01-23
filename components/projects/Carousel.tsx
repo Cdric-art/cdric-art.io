@@ -126,7 +126,7 @@ const SpanGreen = styled("span", {
 
 const ButtonWrapper = styled("div", {
   position: "absolute",
-  bottom: "5vh",
+  bottom: 5,
   left: "50%",
   transform: "translateX(-50%)",
 
