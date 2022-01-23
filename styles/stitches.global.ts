@@ -55,4 +55,12 @@ export const globalStyles = globalCss({
     background: "$contrast",
     borderRadius: 4,
   },
+  "::selection": {
+    color: "$dark100",
+    background: "$contrast",
+  },
+  "::-moz-selection": {
+    color: "$dark100",
+    background: "$contrast",
+  },
 });
