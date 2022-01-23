@@ -26,15 +26,15 @@ export const ThirdProject = () => {
         <ModalBody>
           <ModalDescription>
             <Text>
-              Whire propose aux candidats de créer leurs carte de visite afin de
-              partager plus efficacement et simplement son profil.
+              Whire propose aux candidats de créer leurs cartes de visite afin
+              de partager plus efficacement et simplement son profil.
             </Text>
             <Text>
-              Mais utiliser Google Slide pour créer sa carte n'est pas trés
+              Mais utiliser Google Slide pour créer sa carte n'est pas très
               pratique ni rapide. J'ai donc pensé et crée cette application qui
-              permet de le faire trés facilement avec des options de
+              permet de le faire très facilement avec des options de
               personnalisation. Une fois terminée, le candidat peut imprimer et
-              télecharger sa carte d'un simple clique.
+              télécharger sa carte d'un simple clic.
             </Text>
           </ModalDescription>
           <ModalInfo>

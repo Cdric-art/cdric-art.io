@@ -15,7 +15,7 @@ export const Projects = () => {
         <WrapperParagraphe>
           <Text>
             Une petite galerie de projets dont je suis le plus fier. Je continue
-            de m'exercer en réalisant d'autres projets, j'ai trés hâte de
+            de m'exercer en réalisant d'autres projets, j'ai très hâte de
             pouvoir bientôt les ajouter ci-dessous !
           </Text>
           <Text>
