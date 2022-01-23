@@ -39,7 +39,7 @@ export const ThirdProject = () => {
           </ModalDescription>
           <ModalInfo>
             <Text>Année 2021</Text>
-            <LinkProject href={"#"} />
+            <LinkProject href={"http://card-whire.cdric-art.me/"} />
             <p>
               <Pills name={"html"}>HTML</Pills>
               <Pills name={"scss"}>SCSS</Pills>
