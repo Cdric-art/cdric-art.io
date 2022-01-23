@@ -28,7 +28,11 @@ export const WorkExperience = () => {
         </a>
       </Work>
       <Work>
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://card-whire.cdric-art.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <header>Développeur React JS</header>
           <div className="time">
             <span>Whire - Side Project</span>
