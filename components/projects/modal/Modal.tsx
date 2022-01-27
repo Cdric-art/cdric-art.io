@@ -1,8 +1,9 @@
 import React, { Dispatch, SetStateAction, useEffect } from "react";
-import { FirstProject } from "../FirstProject";
-import { SecondProject } from "../SecondProject";
-import { ThirdProject } from "../ThirdProject";
-import { FourProject } from "../FourProject";
+import { WhireProject } from "../WhireProject";
+import { MoviesProject } from "../MoviesProject";
+import { ArtisteProject } from "../ArtisteProject";
+import { CardWhireProject } from "../CardWhireProject";
+import { CalculateProject } from "../CalculateProject";
 import { styled } from "../../../styles/stitches.config";
 
 type ModalProps = {
@@ -20,13 +21,15 @@ export const Modal = ({ dataset, toggle }: ModalProps) => {
   return (
     <ModalContainer onClick={() => toggle(null)}>
       {dataset === 1 ? (
-        <FirstProject />
+        <WhireProject />
       ) : dataset === 2 ? (
-        <SecondProject />
+        <MoviesProject />
       ) : dataset === 3 ? (
-        <ThirdProject />
+        <ArtisteProject />
       ) : dataset === 4 ? (
-        <FourProject />
+        <CardWhireProject />
+      ) : dataset === 5 ? (
+        <CalculateProject />
       ) : null}
     </ModalContainer>
   );

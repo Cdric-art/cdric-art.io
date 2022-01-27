@@ -12,7 +12,7 @@ import Whire1 from "../../public/assets/images/whire1.png";
 import Whire2 from "../../public/assets/images/whire2.png";
 import Whire3 from "../../public/assets/images/whire3.png";
 
-export const FirstProject = () => {
+export const WhireProject = () => {
   return (
     <article>
       <TitleModal name={"Whire"} />

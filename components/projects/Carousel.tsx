@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-
+import { Modal } from "./modal/Modal";
+import { ArrowVariants } from "../svg";
 import { styled } from "../../styles/stitches.config";
 
 import WhireImg from "../../public/assets/images/whire.png";
 import ArtisteImg from "../../public/assets/images/artiste.png";
 import WhireCardImg from "../../public/assets/images/card-whire.png";
 import CalculateImg from "../../public/assets/images/calculate.png";
-import { ArrowVariants } from "../svg";
-import { Modal } from "./modal/Modal";
+import MoviesApp from "../../public/assets/images/movies-app1.png";
 
 export const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -32,18 +32,24 @@ export const Carousel = () => {
           <p>React JS</p>
         </Slide>
         <Slide onClick={() => setDataset(2)}>
+          <img src={MoviesApp.src} alt="Project MoviesApp" />
+          <h3>Movies App</h3>
+          <SpanGreen />
+          <p>React JS - Stitches</p>
+        </Slide>
+        <Slide onClick={() => setDataset(3)}>
           <img src={ArtisteImg.src} alt="Project Artiste" />
           <h3>Artiste</h3>
           <SpanGreen />
           <p>React JS - WordPress</p>
         </Slide>
-        <Slide onClick={() => setDataset(3)}>
+        <Slide onClick={() => setDataset(4)}>
           <img src={WhireCardImg.src} alt="Project Whire Card" />
           <h3>Whire Card</h3>
           <SpanGreen />
           <p>React JS</p>
         </Slide>
-        <Slide onClick={() => setDataset(4)}>
+        <Slide onClick={() => setDataset(5)}>
           <img src={CalculateImg.src} alt="Project Calculate" />
           <h3>Calculate App</h3>
           <SpanGreen />
@@ -93,6 +99,7 @@ const Slide = styled("div", {
 
   img: {
     objectFit: "cover",
+    maxHeight: 137,
   },
 
   h3: {

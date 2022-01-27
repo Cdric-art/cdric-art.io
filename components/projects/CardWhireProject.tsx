@@ -12,7 +12,7 @@ import CardWhire1 from "../../public/assets/images/card-whire.png";
 import CardWhire2 from "../../public/assets/images/card-whire1.png";
 import CardWhire3 from "../../public/assets/images/card-whire2.png";
 
-export const ThirdProject = () => {
+export const CardWhireProject = () => {
   return (
     <article>
       <TitleModal name={"Card Whire"} />

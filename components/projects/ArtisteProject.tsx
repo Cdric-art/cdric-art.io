@@ -13,7 +13,7 @@ import Artiste1 from "../../public/assets/images/artiste1.png";
 import Artiste2 from "../../public/assets/images/artiste2.png";
 import Artiste3 from "../../public/assets/images/artiste3.png";
 
-export const SecondProject = () => {
+export const ArtisteProject = () => {
   return (
     <article>
       <TitleModal name={"Artiste"} />

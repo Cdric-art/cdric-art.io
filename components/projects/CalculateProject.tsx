@@ -12,7 +12,7 @@ import Calculate1 from "../../public/assets/images/calculate.png";
 import Calculate2 from "../../public/assets/images/calculate1.png";
 import Calculate3 from "../../public/assets/images/calculate2.png";
 
-export const FourProject = () => {
+export const CalculateProject = () => {
   return (
     <article>
       <TitleModal name={"Calculate App"} />
