@@ -26,8 +26,7 @@ const Wrapper = styled("div", {
   alignSelf: "flex-end",
 
   img: {
-    maxHeight: 150,
-    objectFit: "cover",
+    maxHeight: 250,
     width: "100%",
     height: "100%",
   },
@@ -48,8 +47,8 @@ const Wrapper = styled("div", {
 
 const Info = styled("div", {
   position: "absolute",
-  top: 10,
-  left: 20,
+  top: 20,
+  left: -40,
   padding: "$space2",
   backgroundColor: "$dark100",
   border: "1px solid $contrast",
