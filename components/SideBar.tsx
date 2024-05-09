@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { styled } from "../styles/stitches.config";
 
 import { ListLink } from "./sidebar/ListLink";
@@ -10,7 +11,7 @@ export const SideBar = () => {
   return (
     <Side_Bar>
       <Logo_container href="/">
-        <img src={LogoImage.src} alt="logo" />
+        <Image src={LogoImage} height={120} width={60} />
         <h3>Cédric</h3>
         <h4>Développeur Web</h4>
       </Logo_container>
@@ -38,9 +39,7 @@ const Logo_container = styled("a", {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "#11111b",
   "& img": {
-    height: 120,
     marginTop: "$space3!important",
     objectFit: "contain",
   },
