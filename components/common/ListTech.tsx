@@ -7,13 +7,13 @@ export const ListTech = () => {
     <Wrapper>
       <Item>SCSS</Item>
       <Item>CssInJS</Item>
-      <Item>JavaScript</Item>
+      <Item>TypeScript</Item>
       <Item>React Js</Item>
-      <Item>Vite Js</Item>
+      <Item>Next Js</Item>
       <Item>Pnpm</Item>
       <Item>Git</Item>
       <Item>Insomnia</Item>
-      <Item>PhpStorm</Item>
+      <Item>Laravel</Item>
     </Wrapper>
   );
 };

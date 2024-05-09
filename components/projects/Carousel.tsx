@@ -7,7 +7,6 @@ import { styled } from "../../styles/stitches.config";
 import WhireImg from "../../public/assets/images/whire.png";
 import ArtisteImg from "../../public/assets/images/artiste.png";
 import WhireCardImg from "../../public/assets/images/card-whire.png";
-import CalculateImg from "../../public/assets/images/calculate.png";
 import MoviesApp from "../../public/assets/images/movies-app1.png";
 
 export const Carousel = () => {
@@ -48,12 +47,6 @@ export const Carousel = () => {
           <h3>Whire Card</h3>
           <SpanGreen />
           <p>React JS</p>
-        </Slide>
-        <Slide onClick={() => setDataset(5)}>
-          <img src={CalculateImg.src} alt="Project Calculate" />
-          <h3>Calculate App</h3>
-          <SpanGreen />
-          <p>React Native</p>
         </Slide>
       </Wrapper>
       <ButtonWrapper>

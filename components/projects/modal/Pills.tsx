@@ -23,19 +23,19 @@ const PillsVariants = styled("span", {
   variants: {
     color: {
       html: {
-        backgroundColor: "#ED7345",
+        backgroundColor: "#fab387",
       },
       scss: {
-        backgroundColor: "#C16393",
+        backgroundColor: "#f5c2e7",
       },
       react: {
-        backgroundColor: "#58BBDC",
+        backgroundColor: "#74c7ec",
       },
       native: {
-        backgroundColor: "#7449B9",
+        backgroundColor: "#cba6f7",
       },
       wordpress: {
-        backgroundColor: "#3C90B0",
+        backgroundColor: "#89b4fa",
       },
     },
   },

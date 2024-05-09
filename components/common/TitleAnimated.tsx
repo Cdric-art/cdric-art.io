@@ -13,7 +13,7 @@ export const TitleAnimated = () => {
       <span>I</span>
       <span>'</span>
       <span>m&nbsp;</span>
-      <Letter>C</Letter>
+      <span>C</span>
       <span>é</span>
       <span>d</span>
       <span>r</span>
@@ -67,10 +67,13 @@ const bounceLight = keyframes({
 const Title = styled("h1", {
   position: "relative",
   fontSize: "3.1rem",
-  letterSpacing: "-5px",
+  letterSpacing: "-1px",
   fontWeight: 900,
   lineHeight: 1,
   margin: 0,
+  color: "transparent",
+  backgroundImage: "linear-gradient(120deg, #fab387, #cba6f7)",
+  backgroundClip: "text",
   "@tablet": {
     fontSize: "4.5rem",
   },
@@ -118,21 +121,16 @@ const Title = styled("h1", {
     color: "$gray100",
     fontWeight: 400,
     letterSpacing: 1,
-    bottom: 10,
-    left: 290,
+    bottom: -25,
+    left: 310,
     "@tablet": {
-      bottom: 20,
-      left: 450,
+      bottom: -20,
+      left: 480,
     },
     "@desktop": {
       fontSize: "1.3rem",
-      left: 630,
-      bottom: 30,
+      left: 700,
+      bottom: 20,
     },
   },
-});
-
-const Letter = styled("span", {
-  color: "$red",
-  textShadow: "-5px 0 $colors$contrast",
 });

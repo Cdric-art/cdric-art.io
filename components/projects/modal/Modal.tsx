@@ -3,7 +3,6 @@ import { WhireProject } from "../WhireProject";
 import { MoviesProject } from "../MoviesProject";
 import { ArtisteProject } from "../ArtisteProject";
 import { CardWhireProject } from "../CardWhireProject";
-import { CalculateProject } from "../CalculateProject";
 import { styled } from "../../../styles/stitches.config";
 
 type ModalProps = {
@@ -28,8 +27,6 @@ export const Modal = ({ dataset, toggle }: ModalProps) => {
         <ArtisteProject />
       ) : dataset === 4 ? (
         <CardWhireProject />
-      ) : dataset === 5 ? (
-        <CalculateProject />
       ) : null}
     </ModalContainer>
   );

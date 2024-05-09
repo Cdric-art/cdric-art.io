@@ -5,11 +5,11 @@ export const globalStyles = globalCss({
     boxSizing: "border-box",
   },
   "html, body": {
-    height: "100%",
+    height: "100dvh",
     margin: 0,
   },
   body: {
-    fontFamily: "Overpass",
+    fontFamily: "Inter",
     backgroundColor: "$dark75",
     lineHeight: 1.5,
     color: "$white",

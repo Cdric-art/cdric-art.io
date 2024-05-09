@@ -1,16 +1,14 @@
 import React from "react";
 import { Text } from "../common/Text";
 
-import MapImage from "../../public/assets/images/map.png";
 import { styled } from "../../styles/stitches.config";
 
 export const Map = () => {
   return (
     <Wrapper>
-      <img src={MapImage.src} alt={"Map"} />
       <Info>
         <Text css={{ padding: 0 }}>Evrard Cédric</Text>
-        <Text css={{ padding: 0 }}>75006, Paris</Text>
+        <Text css={{ padding: 0 }}>75018, Paris</Text>
         <Text css={{ padding: 0 }}>
           <span>@ : </span>
           <a href="mailto:contact@cdric-art.me">contact@cdric-art.me</a>

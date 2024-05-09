@@ -44,6 +44,7 @@ const List = styled("ul", {
     "& a": {
       display: "block",
       fontSize: "1rem",
+      fontWeight: "600",
       transition: "all .3s",
       paddingInline: "$space3",
       paddingBlock: "$space4",

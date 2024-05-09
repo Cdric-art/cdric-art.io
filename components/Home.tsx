@@ -34,12 +34,12 @@ const Title_Container = styled("section", {
 
 const TitleSecondary = styled("h3", {
   position: "relative",
-  color: "$gray75",
+  color: "$subtext",
   fontSize: "1rem",
-  fontWeight: 400,
+  fontWeight: 600,
   marginTop: 50,
   marginLeft: 5,
-  letterSpacing: 1.5,
+  letterSpacing: 0,
 
   "&::before": {
     position: "absolute",

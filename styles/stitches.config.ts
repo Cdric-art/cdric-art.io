@@ -3,24 +3,25 @@ import { createStitches } from "@stitches/react";
 export const { styled, globalCss } = createStitches({
   theme: {
     colors: {
-      white: "#FFF",
+      white: "#cdd6f4",
+      subtext: "#a6adc8",
 
-      dark100: "#181818",
-      dark75: "#1d1d1d",
-      dark50: "#282828",
-      dark25: "#373737",
+      dark100: "#181825",
+      dark75: "#1e1e2e",
+      dark50: "#313244",
+      dark25: "#45475a",
 
-      gray100: "#515152",
-      gray75: "#8d8d8d",
-      gray50: "#909096",
+      gray100: "#6c7086",
+      gray75: "#7f849c",
+      gray50: "#9399b2",
 
-      contrast: "#08fdd8",
-      red: "rgb(255, 34, 83)",
-      purple: "rgb(210, 108, 213)",
-      yellow: "#fdb808",
+      contrast: "#94e2d5",
+      red: "#f38ba8",
+      purple: "#cba6f7",
+      yellow: "#f9e2af",
     },
     fonts: {
-      "*": "Overpass",
+      "*": "Inter",
     },
     space: {
       space1: "4px",

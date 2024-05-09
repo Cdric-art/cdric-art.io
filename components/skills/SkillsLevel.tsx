@@ -6,7 +6,7 @@ export const SkillsLevel = () => {
   return (
     <>
       <Card className="wrapper-skills_level">
-        <header>Front-end</header>
+        <header>ReactJS</header>
         <footer>
           <ProgressBar size="75%" color="$contrast" />
         </footer>
@@ -14,19 +14,19 @@ export const SkillsLevel = () => {
       <Card className="wrapper-skills_level">
         <header>Node JS - Adonis JS</header>
         <footer>
-          <ProgressBar size="40%" color="$red" />
+          <ProgressBar size="50%" color="$red" />
         </footer>
       </Card>
       <Card className="wrapper-skills_level">
-        <header>ReactJS</header>
+        <header>Php - Laravel</header>
         <footer>
-          <ProgressBar size="70%" color="$purple" />
+          <ProgressBar size="40%" color="$purple" />
         </footer>
       </Card>
       <Card className="wrapper-skills_level">
-        <header>React Native</header>
+        <header>Swift - SwiftUI</header>
         <footer>
-          <ProgressBar size="50%" color="$yellow" />
+          <ProgressBar size="35%" color="$yellow" />
         </footer>
       </Card>
     </>

@@ -27,7 +27,8 @@ const Side_Bar = styled("nav", {
     position: "fixed",
     top: 0,
     left: 0,
-    height: "100vh",
+    height: "100dvh",
+    width: "180px",
     backgroundColor: "$dark100",
   },
 });
@@ -37,10 +38,9 @@ const Logo_container = styled("a", {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "black",
+  backgroundColor: "#11111b",
   "& img": {
     height: 120,
-    width: 50,
     marginTop: "$space3!important",
     objectFit: "contain",
   },

@@ -16,8 +16,8 @@ export const About = () => {
         <TitleSection>Me, Myself and I</TitleSection>
         <WrapperParagraphe>
           <Text>
-            Je suis un jeune développeur web de 30 ans, habitant à Paris. Je
-            suis <span>autodidacte depuis plus de deux ans</span> dans ce
+            Je suis un développeur web de 33 ans, habitant à Paris. Je
+            suis <span>autodidacte depuis plus de quatre ans</span> dans ce
             domaine, et j'ai également obtenu une <span>licence en 2021</span>{" "}
             suite à une formation IFOCOP.
           </Text>
