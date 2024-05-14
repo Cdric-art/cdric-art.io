@@ -13,7 +13,7 @@ type ModalProps = {
 export const Modal = ({ dataset, toggle }: ModalProps) => {
   useEffect(() => {
     window.addEventListener("keypress", (e) => {
-      if (e.key === "Escape") toggle(null);
+      if (e.key === "escape") toggle(null);
     });
   }, [toggle]);
 
@@ -32,9 +32,9 @@ export const Modal = ({ dataset, toggle }: ModalProps) => {
   );
 };
 
-const ModalContainer = styled("article", {
+const ModalContainer = styled("div", {
   position: "absolute",
-  top: "5vh",
+  top: "25vh!important",
   bottom: "15vh",
   left: "10vw",
   right: "10vw",

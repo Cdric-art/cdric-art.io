@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "./common/Container";
 import { ContainerText } from "./common/ContainerText";
 import { TitleSection } from "./common/TitleSection";
 import { WrapperParagraphe } from "./common/WrapperParagraphe";
 import { Text } from "./common/Text";
 import { ScrollDown } from "./common/ScrollDown";
-import { Carousel } from "./projects/Carousel";
+import { Modal } from "./projects/modal/Modal";
+import { styled } from "../styles/stitches.config";
+
+import WhireImg from "../public/assets/images/whire.png";
+import ArtisteImg from "../public/assets/images/artiste.png";
+import WhireCardImg from "../public/assets/images/card-whire.png";
+import MoviesApp from "../public/assets/images/movies-app1.png";
 
 export const Projects = () => {
+  const [dataset, setDataset] = useState<number | null>(null);
+
   return (
     <Container position={"direction"} after={"display"} id="projects">
       <ContainerText css={{ alignSelf: "start" }} size={"large"}>
@@ -34,9 +42,97 @@ export const Projects = () => {
           </Text>
         </WrapperParagraphe>
       </ContainerText>
-      <Carousel />
+      <Grid>
+        <Card onClick={() => setDataset(1)}>
+          <img src={WhireImg.src} alt="Project Whire" />
+          <h3>Whire</h3>
+          <SpanGreen />
+          <p>React JS</p>
+        </Card>
+        <Card onClick={() => setDataset(2)}>
+          <img src={MoviesApp.src} alt="Project MoviesApp" />
+          <h3>Movies App</h3>
+          <SpanGreen />
+          <p>React JS - Stitches</p>
+        </Card>
+        <Card onClick={() => setDataset(3)}>
+          <img src={ArtisteImg.src} alt="Project Artiste" />
+          <h3>Artiste</h3>
+          <SpanGreen />
+          <p>React JS - WordPress</p>
+        </Card>
+        <Card onClick={() => setDataset(4)}>
+          <img src={WhireCardImg.src} alt="Project Whire Card" />
+          <h3>Whire Card</h3>
+          <SpanGreen />
+          <p>React JS</p>
+        </Card>
+      </Grid>
+
+      {dataset && <Modal dataset={dataset} toggle={setDataset} />}
+
       <ScrollDown position="left" />
       <ScrollDown position="right" />
     </Container>
   );
 };
+
+const Grid = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "1fr",
+  gap: "$space8",
+  marginTop: "5vh",
+  paddingBottom: 20,
+
+  "@tablet": {
+    gridTemplateColumns: "1fr 1fr",
+    paddingBottom: 80,
+  },
+
+  "@desktop": {
+    gridTemplateColumns: "1fr 1fr 1fr",
+  },
+});
+
+const Card = styled("div", {
+  maxWidth: 300,
+  border: "1px solid transparent",
+  transition: "all .3s",
+  cursor: "pointer",
+  backgroundColor: "$dark50",
+  borderRadius: 12,
+  padding: "$space4",
+
+  img: {
+    objectFit: "cover",
+    maxHeight: 137,
+  },
+
+  h3: {
+    fontSize: "1.8rem",
+    fontWeight: 600,
+    padding: "$space1",
+    letterSpacing: -1,
+  },
+
+  p: {
+    fontSize: "1.2rem",
+    margin: "$space4 0 0 0",
+    padding: "$space1",
+    fontWeight: 400,
+    lineHeight: 1,
+  },
+
+  "&:hover": {
+    borderColor: "$contrast",
+  },
+});
+
+const SpanGreen = styled("span", {
+  display: "block",
+  width: 40,
+  height: 3,
+  margin: "$space1",
+  borderRadius: 6,
+  backgroundColor: "$contrast",
+});
