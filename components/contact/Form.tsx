@@ -1,5 +1,4 @@
 import React, { FormEventHandler, useRef, useState } from "react";
-import { UseMail } from "./useMail";
 import { styled } from "../../styles/stitches.config";
 
 export const Form = () => {
@@ -8,17 +7,24 @@ export const Form = () => {
   const [success, setSuccess] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(true);
 
-  const sendMail: FormEventHandler<HTMLFormElement> = (e) => {
+  const sendMail: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     setSuccess(false);
     if (formRef.current) {
-      UseMail(formRef.current)
-        .then(() => {
-          formRef.current?.reset();
-          setSuccess(true);
-          setDisabled(true);
-        })
-        .catch((err) => console.log({ err }));
+      const payload = new FormData(formRef.current);
+        const response = await fetch("http://localhost:3333/sendmail", {
+        method: "POST",
+        referrerPolicy: "no-referrer",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(payload)),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        formRef.current.reset();
+      }
     }
   };
 
@@ -26,10 +32,10 @@ export const Form = () => {
     <Formulaire ref={formRef} onSubmit={sendMail}>
       <WrapperInput>
         <input type="text" name="name" placeholder="Nom*" />
-        <input type="email" name="email" placeholder="Email*" />
+        <input type="email" name="mail" placeholder="Email*" />
       </WrapperInput>
       <WrapperInput>
-        <input type="text" name="subject" placeholder="Objet" />
+        <input type="text" name="object" placeholder="Objet" />
       </WrapperInput>
       <WrapperInput className="textarea_form">
         <textarea
@@ -47,13 +53,9 @@ export const Form = () => {
 
 const Formulaire = styled("form", {
   position: "relative",
+  width: "50%",
   display: "grid",
   gridAutoRows: "minmax(50px, auto)",
-  marginTop: 30,
-
-  "@desktop": {
-    marginTop: 50,
-  },
 
   "&::before": {
     position: "absolute",
@@ -125,7 +127,7 @@ const WrapperInput = styled("div", {
 const Button = styled("button", {
   position: "relative",
   alignSelf: "center",
-  justifySelf: "end",
+  justifySelf: "start",
   fontSize: ".8rem",
   letterSpacing: 4,
   color: "$contrast",
