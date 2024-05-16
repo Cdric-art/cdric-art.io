@@ -12,12 +12,18 @@ import WhireImg from "../public/assets/images/whire.png";
 import ArtisteImg from "../public/assets/images/artiste.png";
 import WhireCardImg from "../public/assets/images/card-whire.png";
 import MoviesApp from "../public/assets/images/movies-app1.png";
+import { Strong } from "./common/Strong";
 
 export const Projects = () => {
   const [dataset, setDataset] = useState<number | null>(null);
 
   return (
-    <Container position={"direction"} after={"display"} id="projects">
+    <Container
+      position={"direction"}
+      css={{ height: "auto" }}
+      after={"display"}
+      id="projects"
+    >
       <ContainerText css={{ alignSelf: "start" }} size={"large"}>
         <TitleSection>My projects</TitleSection>
         <WrapperParagraphe>
@@ -71,6 +77,7 @@ export const Projects = () => {
 
       {dataset && <Modal dataset={dataset} toggle={setDataset} />}
 
+      <Strong text="Proj." />
       <ScrollDown position="left" />
       <ScrollDown position="right" />
     </Container>

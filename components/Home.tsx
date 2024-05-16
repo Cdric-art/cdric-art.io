@@ -4,6 +4,7 @@ import { TitleAnimated } from "./common/TitleAnimated";
 import { Strong } from "./common/Strong";
 import { LinkTitle } from "./common/LinkTitle";
 import { ScrollDown } from "./common/ScrollDown";
+import { HomeSvg } from "./svg";
 
 export const Home = () => {
   return (
@@ -13,6 +14,9 @@ export const Home = () => {
         <TitleSecondary>Front End Developer / React</TitleSecondary>
         <LinkTitle text="Contactez moi!" />
       </Title_Container>
+      <Svg_Container>
+        <HomeSvg/>
+      </Svg_Container>
       <Strong text="Web" />
       <ScrollDown position="left" />
       <ScrollDown position="right" />
@@ -22,6 +26,16 @@ export const Home = () => {
 
 const Home_container = styled("section", {
   position: "relative",
+  display: "grid",
+  gridTemplateColumns: "1fr",
+  gap: "$space4",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100vh",
+
+  "@desktop": {
+    gridTemplateColumns: "1fr 1fr",
+  }
 });
 
 const Title_Container = styled("section", {
@@ -29,7 +43,16 @@ const Title_Container = styled("section", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  height: "100vh",
+});
+
+const Svg_Container = styled("div", {
+  display: "none",
+  maxHeight: "400px",
+
+  "@desktop": {
+    display: "block",
+    paddingRight: "$space8"
+  }
 });
 
 const TitleSecondary = styled("h3", {

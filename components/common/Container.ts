@@ -6,7 +6,7 @@ export const Container = styled("section", {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  minHeight: "100vh",
   overflow: "hidden",
 
   "@desktop": {

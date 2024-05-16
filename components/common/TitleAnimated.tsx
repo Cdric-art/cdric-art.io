@@ -77,9 +77,6 @@ const Title = styled("h1", {
   "@tablet": {
     fontSize: "4.5rem",
   },
-  "@desktop": {
-    fontSize: "6rem",
-  },
 
   "& span": {
     display: "inline-block",
@@ -122,15 +119,13 @@ const Title = styled("h1", {
     fontWeight: 400,
     letterSpacing: 1,
     bottom: -25,
-    left: 310,
+    left: -10,
     "@tablet": {
       bottom: -20,
-      left: 480,
     },
     "@desktop": {
       fontSize: "1.3rem",
-      left: 700,
-      bottom: 20,
+      left: -30,
     },
   },
 });
