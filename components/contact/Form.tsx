@@ -12,7 +12,7 @@ export const Form = () => {
     setSuccess(false);
     if (formRef.current) {
       const payload = new FormData(formRef.current);
-        const response = await fetch("http://localhost:3333/sendmail", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/sendmail`, {
         method: "POST",
         referrerPolicy: "no-referrer",
         headers: {

@@ -1,5 +1,6 @@
 import React from "react";
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
+import { getCssText } from "../styles/stitches.config";
 
 export default class Document extends NextDocument {
   render() {
@@ -13,7 +14,10 @@ export default class Document extends NextDocument {
             sizes="16x16"
             href="/favicon.png"
           />
-
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
