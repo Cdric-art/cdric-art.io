@@ -24,7 +24,10 @@ export const Messages = () => {
       <Wrapper_Messages>
         {messages.map((m: MessagesType) => (
           <Card key={m.id}>
-            <h3>Nom : {m.name}</h3>
+            <Flex>
+              <h3>{m.name}</h3>
+              <span>{m.createdAt.split('T')[0]}</span>
+            </Flex>
             <h3>Email : {m.mail}</h3>
             <h4>Objet : {m.object}</h4>
             <p>Message : {m.message}</p>
@@ -46,6 +49,12 @@ const Wrapper_Messages = styled("div", {
   width: 900,
   marginInline: "auto",
   gap: "$space8",
+});
+
+const Flex = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
 });
 
 const Card = styled("div", {
@@ -70,6 +79,11 @@ const Card = styled("div", {
   p: {
     fontSize: ".8rem",
     marginTop: "$space4",
+  },
+
+  span: {
+    fontSize: ".6rem",
+    color: "$red",
   },
 
   "&:hover": {

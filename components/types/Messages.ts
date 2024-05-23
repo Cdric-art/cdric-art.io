@@ -3,5 +3,6 @@ export type MessagesType = {
   mail: string,
   name: string,
   object: string,
-  message: string
+  message: string,
+  createdAt: string
 }
