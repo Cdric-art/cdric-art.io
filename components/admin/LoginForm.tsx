@@ -1,7 +1,12 @@
 import { styled } from "@stitches/react";
 import { FormEventHandler, useRef, useState } from "react";
+import { User } from "../types/User";
 
-export const LoginForm = ({ setUser }) => {
+type PropsLoginForm = {
+  setUser: (user: User) => void
+}
+
+export const LoginForm = ({ setUser }: PropsLoginForm) => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 

@@ -1,9 +1,14 @@
 import { styled } from "@stitches/react";
 import { useState } from "react";
+import { User } from "../types/User";
 import { Messages } from "./Messages";
 import { Projets } from "./Projets";
 
-export const HomeDashboard = ({ user }) => {
+type PropsHomeDashboard = {
+  user: User
+}
+
+export const HomeDashboard = ({ user }: PropsHomeDashboard) => {
   const [tabs, settabs] = useState(false);
 
   return (

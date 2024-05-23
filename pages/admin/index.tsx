@@ -3,11 +3,7 @@ import { styled } from "@stitches/react";
 import { SideBarAdmin } from "../../components/admin/SideBarAdmin";
 import { LoginForm } from "../../components/admin/LoginForm";
 import { HomeDashboard } from "../../components/admin/HomeDashboard";
-
-interface User {
-  fullName: string;
-  email: string;
-}
+import { User } from "../../components/types/User";
 
 function Admin() {
   const [user, setUser] = useState<User | null>(null);
@@ -16,7 +12,7 @@ function Admin() {
     <Admin_Container>
       <SideBarAdmin />
       <Right_Container>
-        {user ? <HomeDashboard user={user}/> : <LoginForm setUser={setUser} />}
+        {user ? <HomeDashboard user={user} /> : <LoginForm setUser={setUser} />}
       </Right_Container>
     </Admin_Container>
   );
