@@ -45,7 +45,6 @@ const Wrapper = styled("div", {
 const Wrapper_Messages = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  alignItems: "start",
   width: 900,
   marginInline: "auto",
   gap: "$space8",
