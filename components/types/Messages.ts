@@ -1,8 +1,8 @@
 export type MessagesType = {
   id: number,
-  mail: string,
+  email: string,
   name: string,
   object: string,
   message: string,
-  createdAt: string
+  created_at: string
 }

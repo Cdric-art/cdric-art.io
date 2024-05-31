@@ -1,3 +1,4 @@
+import { createClient } from "@supabase/supabase-js";
 import React, { FormEventHandler, useRef, useState } from "react";
 import { styled } from "../../styles/stitches.config";
 
@@ -7,23 +8,23 @@ export const Form = () => {
   const [success, setSuccess] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(true);
 
+  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+
   const sendMail: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     setSuccess(false);
     if (formRef.current) {
       const payload = new FormData(formRef.current);
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/sendmail`, {
-        method: "POST",
-        referrerPolicy: "no-referrer",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(Object.fromEntries(payload)),
-      });
+      const { data, error } = await supabase.from("message").insert({
+        email: payload.get("email"),
+        name: payload.get("name"),
+        object: payload.get("object"),
+        message: payload.get("message")
+      })
 
-      if (response.ok) {
-        setSuccess(true);
-        formRef.current.reset();
+      if (!error) {
+        setSuccess(true)
+        formRef.current.reset()
       }
     }
   };
@@ -32,7 +33,7 @@ export const Form = () => {
     <Formulaire ref={formRef} onSubmit={sendMail}>
       <WrapperInput>
         <input type="text" name="name" placeholder="Nom*" />
-        <input type="email" name="mail" placeholder="Email*" />
+        <input type="email" name="email" placeholder="Email*" />
       </WrapperInput>
       <WrapperInput>
         <input type="text" name="object" placeholder="Objet" />

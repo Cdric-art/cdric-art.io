@@ -1,34 +1,32 @@
 import { styled } from "@stitches/react";
+import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { MessagesType } from "../types/Messages";
 
 export const Messages = () => {
-  const [messages, setMessages] = useState<MessagesType[]>([]);
+  const [messages, setMessages] = useState<any[] | null>(null);
+  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+
+  const getMessages = async () => {
+    const { data } = await supabase.from("message").select()
+    setMessages(data)
+  }
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/mail`, {
-      method: "GET",
-      referrerPolicy: "no-referrer",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    })
-      .then((res) => res.json())
-      .then((data) => setMessages(data));
+    getMessages()
   }, []);
 
   return (
     <Wrapper>
       <h2>Messages</h2>
       <Wrapper_Messages>
-        {messages.map((m: MessagesType) => (
+        {messages?.map((m: MessagesType) => (
           <Card key={m.id}>
             <Flex>
               <h3>{m.name}</h3>
-              <span>{m.createdAt.split('T')[0]}</span>
+              <span>{m.created_at.split('T')[0]}</span>
             </Flex>
-            <h3>Email : {m.mail}</h3>
+            <h3>Email : {m.email}</h3>
             <h4>Objet : {m.object}</h4>
             <p>Message : {m.message}</p>
           </Card>
