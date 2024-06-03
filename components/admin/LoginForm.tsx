@@ -1,5 +1,6 @@
 import { styled } from "@stitches/react";
 import { FormEventHandler, useRef, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import { User } from "../types/User";
 
 type PropsLoginForm = {
@@ -7,6 +8,9 @@ type PropsLoginForm = {
 }
 
 export const LoginForm = ({ setUser }: PropsLoginForm) => {
+
+  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+
   const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -16,20 +20,14 @@ export const LoginForm = ({ setUser }: PropsLoginForm) => {
 
     if (formRef.current) {
       const payload = new FormData(formRef.current);
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
-        method: "POST",
-        referrerPolicy: "no-referrer",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(Object.fromEntries(payload)),
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: payload.get("email") as string,
+        password: payload.get("password") as string
       })
-        .then((res) => res.json())
-        .then((data) => {
-          setLoading(false);
-          setUser(data.user);
-        });
+
+      if (!error) {
+        setUser(data.user as User)
+      }
     }
   };
 

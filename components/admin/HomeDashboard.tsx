@@ -14,7 +14,7 @@ export const HomeDashboard = ({ user }: PropsHomeDashboard) => {
   return (
     <Container>
       <Header>
-        <h2>{`Connecté en tant que : ${user.fullName}`}</h2>
+        <h2>{`Connecté en tant que : ${user.email}`}</h2>
         <ul>
           <li onClick={() => settabs(false)}>Messages</li>
           <li onClick={() => settabs(true)}>Projets</li>

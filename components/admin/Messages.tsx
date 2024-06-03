@@ -12,6 +12,13 @@ export const Messages = () => {
     setMessages(data)
   }
 
+  const deleteMessage = async (message: MessagesType) => {
+    const response = await supabase.from("message").delete().eq("id", message.id)
+    if (response.status == 204) {
+      getMessages()
+    }
+  }
+
   useEffect(() => {
     getMessages()
   }, []);
@@ -29,6 +36,7 @@ export const Messages = () => {
             <h3>Email : {m.email}</h3>
             <h4>Objet : {m.object}</h4>
             <p>Message : {m.message}</p>
+            <DeleteBtn onClick={() => deleteMessage(m)}>Supprimer</DeleteBtn>
           </Card>
         ))}
       </Wrapper_Messages>
@@ -43,7 +51,7 @@ const Wrapper = styled("div", {
 const Wrapper_Messages = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr",
-  width: 900,
+  width: 1200,
   marginInline: "auto",
   gap: "$space8",
 });
@@ -55,10 +63,9 @@ const Flex = styled("div", {
 });
 
 const Card = styled("div", {
-  maxWidth: 300,
+  alignSelf: "start",
   border: "1px solid transparent",
   transition: "all .3s",
-  cursor: "pointer",
   backgroundColor: "$dark50",
   borderRadius: 12,
   padding: "$space4",
@@ -87,3 +94,14 @@ const Card = styled("div", {
     borderColor: "$contrast",
   },
 });
+
+const DeleteBtn = styled('button', {
+  fontSize: ".6rem",
+  color: "$red",
+  marginTop: "$space2",
+  borderRadius: 4,
+  border: "1px solid $red",
+  backgroundColor: "$dark50",
+  padding: "$space1",
+  cursor: "pointer",
+})
