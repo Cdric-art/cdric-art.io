@@ -4,6 +4,7 @@ import { MoviesProject } from "../MoviesProject";
 import { ArtisteProject } from "../ArtisteProject";
 import { CardWhireProject } from "../CardWhireProject";
 import { styled } from "../../../styles/stitches.config";
+import { CompteProject } from "../CompteTaCaisseProject";
 
 type ModalProps = {
   dataset: number | null;
@@ -19,7 +20,9 @@ export const Modal = ({ dataset, toggle }: ModalProps) => {
 
   return (
     <ModalContainer onClick={() => toggle(null)}>
-      {dataset === 1 ? (
+      {dataset === 5 ? (
+        <CompteProject />
+      ) : dataset === 1 ? (
         <WhireProject />
       ) : dataset === 2 ? (
         <MoviesProject />

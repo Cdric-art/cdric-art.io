@@ -8,6 +8,7 @@ import { ScrollDown } from "./common/ScrollDown";
 import { Modal } from "./projects/modal/Modal";
 import { styled } from "../styles/stitches.config";
 
+import Compte from "../public/assets/images/CompteTaCaisse.png";
 import WhireImg from "../public/assets/images/whire.png";
 import ArtisteImg from "../public/assets/images/artiste.png";
 import WhireCardImg from "../public/assets/images/card-whire.png";
@@ -49,6 +50,12 @@ export const Projects = () => {
         </WrapperParagraphe>
       </ContainerText>
       <Grid>
+        <Card onClick={() => setDataset(5)}>
+          <img src={Compte.src} alt="Project Compte Ta Caisse" />
+          <h3>Compte Ta Caisse</h3>
+          <SpanGreen />
+          <p>Swift - Swift Ui</p>
+        </Card>
         <Card onClick={() => setDataset(1)}>
           <img src={WhireImg.src} alt="Project Whire" />
           <h3>Whire</h3>
