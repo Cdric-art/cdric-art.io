@@ -97,6 +97,7 @@ const Grid = styled("div", {
   gap: "$space8",
   marginTop: "5vh",
   paddingBottom: 20,
+  zIndex: 10,
 
   "@tablet": {
     gridTemplateColumns: "1fr 1fr",

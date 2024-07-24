@@ -15,7 +15,7 @@ export const Home = () => {
         <LinkTitle text="Contactez moi!" />
       </Title_Container>
       <Svg_Container>
-        <HomeSvg/>
+        <HomeSvg />
       </Svg_Container>
       <Strong text="Web" />
       <ScrollDown position="left" />
@@ -35,7 +35,7 @@ const Home_container = styled("section", {
 
   "@desktop": {
     gridTemplateColumns: "1fr 1fr",
-  }
+  },
 });
 
 const Title_Container = styled("section", {
@@ -51,8 +51,8 @@ const Svg_Container = styled("div", {
 
   "@desktop": {
     display: "block",
-    paddingRight: "$space8"
-  }
+    paddingRight: "$space8",
+  },
 });
 
 const TitleSecondary = styled("h3", {
