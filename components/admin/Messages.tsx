@@ -5,22 +5,28 @@ import { MessagesType } from "../types/Messages";
 
 export const Messages = () => {
   const [messages, setMessages] = useState<any[] | null>(null);
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 
   const getMessages = async () => {
-    const { data } = await supabase.from("message").select()
-    setMessages(data)
-  }
+    const { data } = await supabase.from("message").select();
+    setMessages(data);
+  };
 
   const deleteMessage = async (message: MessagesType) => {
-    const response = await supabase.from("message").delete().eq("id", message.id)
+    const response = await supabase
+      .from("message")
+      .delete()
+      .eq("id", message.id);
     if (response.status == 204) {
-      getMessages()
+      getMessages();
     }
-  }
+  };
 
   useEffect(() => {
-    getMessages()
+    getMessages();
   }, []);
 
   return (
@@ -31,7 +37,7 @@ export const Messages = () => {
           <Card key={m.id}>
             <Flex>
               <h3>{m.name}</h3>
-              <span>{m.created_at.split('T')[0]}</span>
+              <span>{m.created_at.split("T")[0]}</span>
             </Flex>
             <h3>Email : {m.email}</h3>
             <h4>Objet : {m.object}</h4>
@@ -95,7 +101,7 @@ const Card = styled("div", {
   },
 });
 
-const DeleteBtn = styled('button', {
+const DeleteBtn = styled("button", {
   fontSize: ".6rem",
   color: "$red",
   marginTop: "$space2",
@@ -104,4 +110,4 @@ const DeleteBtn = styled('button', {
   backgroundColor: "$dark50",
   padding: "$space1",
   cursor: "pointer",
-})
+});
